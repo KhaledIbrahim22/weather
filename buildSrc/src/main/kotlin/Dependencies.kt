@@ -44,8 +44,6 @@ object Dependencies {
     // Hilt (Dependency Injection)
     private const val GROUP_HILT = "com.google.dagger:"
     const val HILT_ANDROID = "${GROUP_HILT}hilt-android:${Versions.HILT}"
-    const val HILT_COMPILER = "${GROUP_HILT}hilt-android-compiler:${Versions.HILT}"
-    const val HILT_TESTING = "${GROUP_HILT}hilt-android-testing:${Versions.HILT}"
 
     private const val GROUP_HILT_ANDROIDX = "androidx.hilt:"
     const val HILT_WORK = "${GROUP_HILT_ANDROIDX}hilt-work:1.0.0"
@@ -65,10 +63,25 @@ object Dependencies {
     const val ROOM_KTX = "${GROUP_ROOM}room-ktx:${Versions.ROOM}"
 
     // Testing
+    // For JUnit and Mockito
     const val JUNIT = "junit:junit:4.13.2"
+    const val MOCKITO = "org.mockito:mockito-core:5.4.0"
     const val MOCKITO_KOTLIN = "org.mockito.kotlin:mockito-kotlin:5.4.0"
-    const val MOCKITO_INLINE = "org.mockito:mockito-inline:5.2.0"
-    const val MOCKITO_COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.1"
+    const val MOCKK = "io.mockk:mockk:1.13.8"   // For JVM tests
+    const val MOCKK_ANDROID = "io.mockk:mockk-android:1.13.8"   // For Android tests
+
+    // For Coroutines testing
+    const val MOCKITO_COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3"
+
+    // For Hilt testing
+    const val HILT_TESTING = "${GROUP_HILT}hilt-android-testing:${Versions.HILT}"
+    const val HILT_COMPILER = "${GROUP_HILT}hilt-android-compiler:${Versions.HILT}"
+
+    // For Room testing
+    const val ROOM_TESTING = "androidx.room:room-testing:${Versions.ROOM}"
+
+    // For Retrofit testing
+    const val OK_HTTP_TESTING = "com.squareup.okhttp3:mockwebserver:${Versions.OK_HTTP}"
 }
 
 fun DependencyHandler.basicDependencies() {
@@ -114,11 +127,6 @@ fun DependencyHandler.hiltDependencies() {
         kapt(HILT_COMPILER)
         implementation(HILT_NAVIGATION_COMPOSE)
 
-        androidTestImplementation(HILT_TESTING)
-        kaptAndroidTest(HILT_COMPILER)
-
-        testImplementation(HILT_TESTING)
-        kaptTest(HILT_COMPILER)
 
         implementation(HILT_WORK)
     }
@@ -144,8 +152,18 @@ fun DependencyHandler.roomDependencies() {
 fun DependencyHandler.unitTestDependencies() {
     Dependencies.apply {
         testImplementation(JUNIT)
+        testImplementation(MOCKITO)
         testImplementation(MOCKITO_KOTLIN)
-        testImplementation(MOCKITO_INLINE)
+        testImplementation(MOCKK)
+        testImplementation(MOCKK_ANDROID)
+
         testImplementation(MOCKITO_COROUTINES)
+
+        testImplementation(HILT_TESTING)
+        kaptTest(HILT_COMPILER)
+
+        testImplementation(ROOM_TESTING)
+
+        testImplementation(OK_HTTP_TESTING)
     }
 }

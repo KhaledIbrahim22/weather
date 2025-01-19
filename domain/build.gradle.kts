@@ -29,6 +29,10 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    lint {
+        abortOnError = false
+        warningsAsErrors = true
+    }
 }
 
 dependencies {
@@ -36,4 +40,5 @@ dependencies {
 
     basicDependencies()
     hiltDependencies()
+    unitTestDependencies()
 }

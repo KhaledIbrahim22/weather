@@ -36,10 +36,15 @@ android {
     buildFeatures {
         compose = true
     }
+    lint {
+        abortOnError = false
+        warningsAsErrors = true
+    }
 }
 
 dependencies {
     basicDependencies()
     hiltDependencies()
     composeDependencies()
+    unitTestDependencies()
 }

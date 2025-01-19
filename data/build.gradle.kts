@@ -32,6 +32,10 @@ android {
     defaultConfig {
         multiDexEnabled = true
     }
+    lint {
+        abortOnError = false
+        warningsAsErrors = true
+    }
 }
 
 dependencies {
@@ -41,8 +45,8 @@ dependencies {
     basicDependencies()
     lifecycleDependencies()
     composeDependencies()
-    unitTestDependencies()
     roomDependencies()
     retrofitDependencies()
     hiltDependencies()
+    unitTestDependencies()
 }
