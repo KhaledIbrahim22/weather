@@ -68,3 +68,11 @@ maintainable, and user-friendly.
 
 - **Why?**: Jetpack Compose's `State` and `MutableState` make it easy to manage UI state in a reactive way.
 - **What it does**: Used to manage the state of the UI (e.g., loading, success, error).
+
+## Screenshots
+
+### Home Screen
+![Home Screen](screenshots/city_input_screen_1_light.png)
+
+### Weather Details
+![Weather Details](screenshots/weather_forecast_screen_dark.png)
