@@ -1,7 +1,8 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 object Dependencies {
-    const val CORE_KTX = "androidx.core:core-ktx:1.13.0"
+    const val CORE_KTX = "androidx.core:core-ktx:1.15.0"
+    const val WORK_RUNTIME = "androidx.work:work-runtime-ktx:2.10.0"
 
     // Lifecycle
     private const val GROUP_LIFECYCLE = "androidx.lifecycle:"
@@ -73,6 +74,7 @@ object Dependencies {
 fun DependencyHandler.basicDependencies() {
     Dependencies.apply {
         implementation(CORE_KTX)
+        implementation(WORK_RUNTIME)
         implementation(LIFECYCLE_RUNTIME_KTX)
         implementation(COMPOSE_ACTIVITY)
         implementation(platform(COMPOSE_BOM))

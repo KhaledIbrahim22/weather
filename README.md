@@ -68,13 +68,3 @@ maintainable, and user-friendly.
 
 - **Why?**: Jetpack Compose's `State` and `MutableState` make it easy to manage UI state in a reactive way.
 - **What it does**: Used to manage the state of the UI (e.g., loading, success, error).
-
----
-
-## API Used
-
-The app uses the [WeatherAPI](https://www.weatherapi.com/) to fetch real-time weather data. You need to sign up for an API key and add it to the
-`buildConfigField` in the `core` module's `build.gradle.kts` file:
-
-```kotlin
-buildConfigField("String", "API_TOKEN", "\"YOUR_API_KEY_HERE\"")
