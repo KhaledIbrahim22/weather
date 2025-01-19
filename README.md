@@ -72,7 +72,7 @@ maintainable, and user-friendly.
 ## Screenshots
 
 ### Home Screen
-![Home Screen](screenshots/city_input_screen_1_light.png)
+![Home Screen](screenshots/city_input_screen_light.png) ![Home Screen](screenshots/city_input_screen_dark.png)
 
 ### Weather Details
-![Weather Details](screenshots/weather_forecast_screen_dark.png)
+![Weather Details](screenshots/weather_forecast_screen_light.png) ![Weather Details](screenshots/weather_forecast_screen_dark.png)
