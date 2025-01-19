@@ -70,9 +70,13 @@ maintainable, and user-friendly.
 - **What it does**: Used to manage the state of the UI (e.g., loading, success, error).
 
 ## Screenshots
-
-### Home Screen
-![Home Screen](screenshots/city_input_screen_light.png) ![Home Screen](screenshots/city_input_screen_dark.png)
-
-### Weather Details
-![Weather Details](screenshots/weather_forecast_screen_light.png) ![Weather Details](screenshots/weather_forecast_screen_dark.png)
+<table>
+  <tr>
+    <td><img src="screenshots/city_input_screen_light.png" alt="Home Screen" width="300"></td>
+    <td><img src="screenshots/weather_forecast_screen_light.png" alt="Weather Details" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/city_input_screen_dark.png" alt="Settings" width="300"></td>
+    <td><img src="screenshots/weather_forecast_screen_dark.png" alt="Notifications" width="300"></td>
+  </tr>
+</table>
